@@ -4,11 +4,8 @@
     reedURL = 'https://www.reed.co.uk/api/1.0/search?keywords=accountant&location=london&employerid=123&distancefromlocation=15';
 
 
-    $j.ajax({url: reedURL,    beforeSend: function (xhr) {
-
-        xhr.setRequestHeader('Authorization', 'Basic ' + btoa(reedAPI + ":" + ''));
-
-      }, success: function(result){
+    $j.ajax({url: reedURL, username: reedAPI,
+    password: '', success: function(result){
         console.log(result);
     }});
 
